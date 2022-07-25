@@ -32,11 +32,11 @@ Procedimento menu_incluir
         limpatela()
 
         escreva(nome)
-   	  escreval(" ")
-   	  escreva(turma)
-   	  escreval(" ")
-   	  escreva(nota)
-   	  escreval(" ")
+   	    escreval(" ")
+   	    escreva(turma)
+   	    escreval(" ")
+   	    escreva(nota)
+   	    escreval(" ")
 
         se (nota>=7) entao
         escreval("")
@@ -58,11 +58,11 @@ Procedimento menu_consultar
         escreval("Consultar dados.")
         escreval("")
         escreva(nome)
-   	  escreval(" ")
-   	  escreva(turma)
-   	  escreval(" ")
-   	  escreva(nota)
-   	  escreval(" ")
+   	    escreval(" ")
+   	    escreva(turma)
+   	    escreval(" ")
+   	    escreva(nota)
+   	    escreval(" ")
            
 Fimprocedimento
 
