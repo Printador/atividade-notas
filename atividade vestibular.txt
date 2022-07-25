@@ -1,49 +1,105 @@
 Var
 
-op: inteiro
-nome, turma, nota: caracter
+op, nota:inteiro
+nome, opx, turma:caractere
+
+Procedimento menu
+
+    Inicio
+        escreval("Cadastro de Notas.")
+        escreval("")
+        escreval("1 - Incluir")
+        escreval("2 - Consultar")
+        escreval("3 - Sair")
+        escreval("")
+        escreva("Opção:")
+
+Fimprocedimento
+
+Procedimento menu_incluir
+
+    Inicio
+        escreval("Incluir dados.")
+        escreval("")
+        escreva("Qual seu nome:")
+        leia(nome)
+        limpatela()
+        escreva("Qual sua turma:")
+        leia(turma)
+        limpatela()
+        escreva("Qual sua nota:")
+        leia(nota)
+        limpatela()
+
+        escreva(nome)
+   	  escreval(" ")
+   	  escreva(turma)
+   	  escreval(" ")
+   	  escreva(nota)
+   	  escreval(" ")
+
+        se (nota>=7) entao
+        escreval("")
+        escreva ("VOCÊ FOI APROVADO!")
+        escreval("")
+        senao
+        se (nota<=6) entao
+        escreval("")
+        escreva ("VOCÊ FOI REPROVADO.")
+        escreval("")
+        fimse
+        fimse
+
+Fimprocedimento
+
+Procedimento menu_consultar
+
+    Inicio
+        escreval("Consultar dados.")
+        escreval("")
+        escreva(nome)
+   	  escreval(" ")
+   	  escreva(turma)
+   	  escreval(" ")
+   	  escreva(nota)
+   	  escreval(" ")
+           
+Fimprocedimento
 
 Inicio
 
-escreval("Vestibular")
-		escreval("")
-     		escreval("1 - Cadastrar")
-     		escreval("2 - Sair")
-		escreval("")
-		escreva("Opção:")
+repita
 
-	leia(op)
-	limpatela()
-	se op=1 entao
-    		escreva("Qual seu nome:")
-		leia(nome)
- 			limpatela()
-   		escreva("Qual sua turma:")
-		leia(turma)
- 			limpatela()
-		escreva("Qual sua nota:")
-		leia(nota)
-			 limpatela()
+      menu
+      escreva("")
+      leia(op)
+      limpatela
+      
+      escolha(op)
 
-   	escreva(nome)
-   	escreval(" ")
-   	escreva(turma)
-   	escreval(" ")
-   	escreva(nota)
-   	escreval(" ")
+          caso 1
+             repita
+                menu_incluir
+                escreval()
+                escreva ("Deseja Voltar? (S/N):")
+                leia(opx)
+                limpatela()
+             ate opx = "N"
 
-                 se (nota>=7) entao
-		 escreval("")
-                 escreva ("VOCÊ FOI APROVADO!")
-		 escreval("")
-                 senao
-                 se (nota<=6) entao
-		 escreval("")
-                 escreva ("VOCÊ FOI REPROVADO.")
- 		 escreval("")
-                 fimse
-                 fimse
+          caso 2
+             repita
+                menu_consultar
+                escreval()
+                escreva ("Deseja Voltar? (S/N):")
+                leia(opx)
+                limpatela()
+             ate opx = "N"
 
-  fimse
+          caso 3
+             escreva ("ATÉ BREVE.")
+
+      fimescolha
+
+ate op = "3"
 
 Fimalgoritmo
