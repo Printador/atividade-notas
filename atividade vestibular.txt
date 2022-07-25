@@ -1,0 +1,49 @@
+Var
+
+op: inteiro
+nome, turma, nota: caracter
+
+Inicio
+
+escreval("Vestibular")
+		escreval("")
+     		escreval("1 - Cadastrar")
+     		escreval("2 - Sair")
+		escreval("")
+		escreva("Opção:")
+
+	leia(op)
+	limpatela()
+	se op=1 entao
+    		escreva("Qual seu nome:")
+		leia(nome)
+ 			limpatela()
+   		escreva("Qual sua turma:")
+		leia(turma)
+ 			limpatela()
+		escreva("Qual sua nota:")
+		leia(nota)
+			 limpatela()
+
+   	escreva(nome)
+   	escreval(" ")
+   	escreva(turma)
+   	escreval(" ")
+   	escreva(nota)
+   	escreval(" ")
+
+                 se (nota>=7) entao
+		 escreval("")
+                 escreva ("VOCÊ FOI APROVADO!")
+		 escreval("")
+                 senao
+                 se (nota<=6) entao
+		 escreval("")
+                 escreva ("VOCÊ FOI REPROVADO.")
+ 		 escreval("")
+                 fimse
+                 fimse
+
+  fimse
+
+Fimalgoritmo
