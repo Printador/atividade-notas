@@ -1,9 +1,11 @@
+Algoritmo "menu_cadastro"
+
 Var
 
-op, nota:inteiro
-nome, opx, turma:caractere
+opcao_numerica, nota:inteiro
+nome, opcao_logica, turma:caractere
 
-Procedimento menu
+Procedimento mostrar_menu
 
     Inicio
         escreval("Cadastro de Notas.")
@@ -66,40 +68,53 @@ Procedimento menu_consultar
            
 Fimprocedimento
 
+Procedimento voltar
+
+    Inicio
+       repita
+          escreva ("Deseja Voltar? (S/N)")
+          leia(opcao_logica)
+          se opcao_logica = "S" entao
+             limpatela()
+             mostrar_menu
+          fimse
+       ate opcao_logica = "S"
+       
+Fimprocedimento
+
 Inicio
 
 repita
 
-      menu
+      mostrar_menu
       escreva("")
-      leia(op)
-      limpatela
+      leia(opcao_numerica)
+      limpatela()
       
-      escolha(op)
+      escolha(opcao_numerica)
 
           caso 1
              repita
                 menu_incluir
-                escreval()
-                escreva ("Deseja Voltar? (S/N):")
-                leia(opx)
+                voltar
+                leia(opcao_numerica)
                 limpatela()
-             ate opx = "N"
+             ate opcao_numerica = "3"
 
           caso 2
              repita
                 menu_consultar
-                escreval()
-                escreva ("Deseja Voltar? (S/N):")
-                leia(opx)
+                voltar
+                leia(opcao_numerica)
                 limpatela()
-             ate opx = "N"
+             ate opcao_numerica = "3"
 
           caso 3
-             escreva ("ATÉ BREVE.")
 
+             escreva ("O PROGRAMA SERÁ ENCERRADO, ATÉ BREVE.")
+             
       fimescolha
 
-ate op = "3"
+ate opcao_numerica = 3
 
 Fimalgoritmo
